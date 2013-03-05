@@ -1,0 +1,16 @@
+﻿<table class="table table-striped">
+    <thead>
+        <tr>
+            {0}
+        </tr>
+    </thead>
+    <tbody data-bind="template: {name : '{2}-row', foreach : list}">
+    </tbody>
+</table>
+
+<script type="text/html" id="{2}-row">
+    <tr data-bind="click: startUpdate">
+        {1}
+        <td>{3}</td>
+    </tr>
+</script>
