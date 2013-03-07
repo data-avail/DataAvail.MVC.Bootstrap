@@ -66,7 +66,11 @@ namespace DataAvail.MVC.Bootstrap.Controllers
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             return "IndexVM";
+=======
+            return "Ural/VM/indexVM";
+>>>>>>> master
 =======
             return "Ural/VM/indexVM";
 >>>>>>> master
@@ -96,7 +100,11 @@ namespace DataAvail.MVC.Bootstrap.Controllers
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             return "ItemVM";
+=======
+            return "Ural/VM/itemVM";
+>>>>>>> master
 =======
             return "Ural/VM/itemVM";
 >>>>>>> master
