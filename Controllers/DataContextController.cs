@@ -65,7 +65,11 @@ namespace DataAvail.MVC.Bootstrap.Controllers
         protected virtual string GetIndexVM()
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return "IndexVM";
+=======
+            return "Ural/VM/indexVM";
+>>>>>>> master
 =======
             return "Ural/VM/indexVM";
 >>>>>>> master
@@ -91,7 +95,11 @@ namespace DataAvail.MVC.Bootstrap.Controllers
         protected virtual string GetDetailsVM()
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return "ItemVM";
+=======
+            return "Ural/VM/itemVM";
+>>>>>>> master
 =======
             return "Ural/VM/itemVM";
 >>>>>>> master
