@@ -39,6 +39,8 @@ namespace DataAvail.MVC.Bootstrap.Helpers
             var header = string.Join("", columns.Select(p => string.Format("<th>{0}</th>", p.name)));
             var row = columns.Select(s => string.Format("<td>{1}<span data-bind='{0}'></span></td>", GetBinding(s.metadata), GetLink(s.metadata)));
             var opers = Opts == null || Opts.RowOpersHtml == null ? BootstrapHelperResources.TableOpers : Opts.RowOpersHtml.ToString();
+            opers = string.Format(opers, Resources.Text.DetailsLink);
+
 
             var table = BootstrapHelperResources.Table
                 .Replace("{0}", header)

@@ -38,11 +38,34 @@ namespace DataAvail.MVC.Bootstrap.Helpers
 
 
             if (FormType == FormType.Create && metadata.AdditionalValues.TryGetValue("UseRepeatCreate", out useRepeatCreate))
-            { 
-                fields +=  "<div class=\"control-group\"><div class=\"controls\"><label class=\"checkbox\"><input type=\"checkbox\" data-bind=\"checked : useRepeatCreate\"> Создать другую </label></div></div>";
+            {
+                fields += string.Format(BootstrapHelperResources.CreateAndContinue, Resources.Text.UpdateAndContinue);
             }
 
-            var form = string.Format(formTemplate, Controller ?? (string)html.ViewContext.RouteData.GetRequiredString("controller"), fields, metadata.DisplayName);
+            string form;
+
+            if (FormType == Helpers.FormType.Create)
+            {
+                form = string.Format(formTemplate,
+                     Controller ?? (string)html.ViewContext.RouteData.GetRequiredString("controller"),
+                     fields,
+                     metadata.DisplayName,
+                     Resources.Text.NewModalHeader,
+                     Resources.Text.CloseButton,
+                     Resources.Text.CreateButton);
+            }
+            else
+            {
+                form = string.Format(formTemplate,
+                     Controller ?? (string)html.ViewContext.RouteData.GetRequiredString("controller"),
+                     fields,
+                     metadata.DisplayName,
+                     Resources.Text.UpdateModalHeader,
+                     Resources.Text.CloseButton,
+                     Resources.Text.UpdateButton, 
+                     Resources.Text.RemoveButton);
+            }
+
 
             return new MvcHtmlString(form);
         }
@@ -64,7 +87,6 @@ namespace DataAvail.MVC.Bootstrap.Helpers
                         (FormType == FormType.Edit && (((RenderMode)renderMode) & RenderMode.Edit) != RenderMode.None);
                 }
 
-                //((System.Web.Mvc.DataAnnotationsModelValidator)col.meta.GetValidators(html.ViewContext).ElementAt(2)).Attribute
                 var rules = metadata.GetValidators(html.ViewContext).OfType<System.Web.Mvc.DataAnnotationsModelValidator>().SelectMany(s => s.GetClientValidationRules());
 
                 return show ? new { property = p.Name, name = metadata.GetDispayFieldName(p.Name), order = metadata.Order, hidden = metadata.AdditionalValues.ContainsKey("Hidden"), meta = metadata, rules = rules} : null;
@@ -155,6 +177,8 @@ namespace DataAvail.MVC.Bootstrap.Helpers
             {
                 if (metadata.ModelType == typeof(DateTime) || metadata.ModelType == typeof(DateTime?))
                     dataBindAttr = string.Format("datetime : {0}", htmlFieldName);
+                else if (metadata.ModelType == typeof(bool) || metadata.ModelType == typeof(bool?))
+                    dataBindAttr = string.Format("checked : {0}", htmlFieldName);
                 else
                     dataBindAttr = string.Format("value : {0}", htmlFieldName);
             }
@@ -171,8 +195,15 @@ namespace DataAvail.MVC.Bootstrap.Helpers
 
            
             if (!metadata.AdditionalValues.ContainsKey("Hidden"))
-            {               
-                tag.MergeAttribute("type", "Text");
+            {
+                var inputType = "text";
+
+                if (metadata.ModelType == typeof(bool) || metadata.ModelType == typeof(bool?))
+                {
+                    inputType = "checkbox";
+                }
+
+                tag.MergeAttribute("type", inputType);
 
                 var readOnly = metadata.IsReadOnly;
 

@@ -64,7 +64,11 @@ namespace DataAvail.MVC.Bootstrap.Controllers
         [NonAction]
         protected virtual string GetIndexVM()
         {
+<<<<<<< HEAD
             return "IndexVM";
+=======
+            return "Ural/VM/indexVM";
+>>>>>>> master
         }
 
         protected object SuccessJson
@@ -86,7 +90,11 @@ namespace DataAvail.MVC.Bootstrap.Controllers
 
         protected virtual string GetDetailsVM()
         {
+<<<<<<< HEAD
             return "ItemVM";
+=======
+            return "Ural/VM/itemVM";
+>>>>>>> master
         }
 
         public ActionResult Create(int? id)

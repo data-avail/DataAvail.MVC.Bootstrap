@@ -75,22 +75,43 @@
     <Compile Include="Helpers\Utils.cs" />
     <Compile Include="Models\IBreadCrumbs.cs" />
     <Compile Include="Models\INamesContainer.cs" />
+    <Compile Include="Models\KeyValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Text.ru-RU.Designer.cs">
+      <DependentUpon>Text.ru-RU.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Text1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Text.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BootstrapHelperResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>BootstrapHelperResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Helpers\Templates\CreateFrorm.html" />
+    <EmbeddedResource Include="Resources\Text.ru-RU.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Text.ru-RU.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Text.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Text1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Helpers\Templates\EditFrorm.html" />
+    <EmbeddedResource Include="Helpers\Templates\EditForm.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Helpers\Templates\EditFrormEmbed.html" />
+    <EmbeddedResource Include="Helpers\Templates\EditFormEmbed.html" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Helpers\Templates\CreateAndContinue.html" />
     <Content Include="Helpers\Templates\Table.html" />
     <Content Include="Helpers\Templates\TableOpers.html" />
   </ItemGroup>

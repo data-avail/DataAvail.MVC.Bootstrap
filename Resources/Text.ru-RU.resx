@@ -117,23 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CreateAndContinue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Helpers\Templates\CreateAndContinue.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="CloseButton" xml:space="preserve">
+    <value>Закрыть</value>
   </data>
-  <data name="CreateFrorm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Helpers\Templates\CreateFrorm.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="CreateButton" xml:space="preserve">
+    <value>Создать</value>
   </data>
-  <data name="EditFrorm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Helpers\Templates\EditForm.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="DetailsLink" xml:space="preserve">
+    <value>Подробнее</value>
   </data>
-  <data name="EditFrormEmbed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Helpers\Templates\EditFormEmbed.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="NewModalHeader" xml:space="preserve">
+    <value>Создать</value>
   </data>
-  <data name="Table" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Helpers\Templates\Table.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="RemoveButton" xml:space="preserve">
+    <value>Удалить</value>
   </data>
-  <data name="TableOpers" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Helpers\Templates\TableOpers.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="UpdateAndContinue" xml:space="preserve">
+    <value>Сохранить и продолжить</value>
+  </data>
+  <data name="UpdateButton" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="UpdateModalHeader" xml:space="preserve">
+    <value>Изменить</value>
   </data>
 </root>

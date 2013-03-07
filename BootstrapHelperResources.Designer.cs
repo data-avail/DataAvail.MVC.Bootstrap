@@ -61,6 +61,23 @@ namespace DataAvail.MVC.Bootstrap {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;div class=&quot;control-group&quot;&gt;
+        ///    &lt;div class=&quot;controls&quot;&gt;
+        ///        &lt;label class=&quot;checkbox&quot;&gt;
+        ///            &lt;input type=&quot;checkbox&quot; data-bind=&quot;checked : useRepeatCreate&quot;&gt;
+        ///            {0}
+        ///        &lt;/label&gt;
+        ///    &lt;/div&gt;
+        ///&lt;/div&gt;
+        ///.
+        /// </summary>
+        internal static string CreateAndContinue {
+            get {
+                return ResourceManager.GetString("CreateAndContinue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;div class=&quot;modal hide&quot; data-form-type=&quot;create&quot; data-form-resource=&quot;{0}&quot;&gt;
         ///    &lt;div class=&quot;modal-header&quot;&gt;
         ///        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;
